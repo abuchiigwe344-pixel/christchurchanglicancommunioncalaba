@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Church Admin | E-Bulletin</title><link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+<header class="admin-head"><div><strong>Christ Church Admin</strong><span>Website content manager</span></div><a href="/">View website</a></header>
+<main class="admin-wrap">
+<section class="login card" id="loginBox">
+  <p class="eyebrow">SECURE ADMIN</p><h1>Manage church website</h1>
+  <p class="muted">The admin area controls more than the PDF: bulletin details, announcements, services, activities, contacts and archived bulletins.</p>
+  <label>Admin password<input id="password" type="password" placeholder="Enter admin password"></label>
+  <button class="btn primary" id="loginBtn">Sign in</button><p id="loginMsg" class="msg"></p>
+</section>
+
+<section id="dashboard" hidden>
+  <div class="dash-title"><div><p class="eyebrow">CONTENT MANAGER</p><h1>Weekly church update</h1></div><button class="btn" id="logoutBtn">Log out</button></div>
+  <div class="grid">
+    <form class="card" id="bulletinForm">
+      <h2>1. Current bulletin</h2>
+      <p class="muted">Upload the PDF and update the information shown beside it.</p>
+      <label>Bulletin title<input name="title" value="This week's bulletin"></label>
+      <label>Date<input name="date" value="30/08/2026"></label>
+      <label>Topic<input name="topic" value="OTHER SIDE FORGOTTEN BREAD"></label>
+      <div class="two"><label>Season<input name="season" value="TRINITY XIII"></label><label>Office<input name="office" value="MATTINS"></label></div>
+      <div class="two"><label>Colour<input name="colour" value="GREEN"></label><label>Time<input name="time" value="7:30AM"></label></div>
+      <label>New bulletin PDF<input name="pdf" type="file" accept="application/pdf"></label>
+      <button class="btn primary" type="submit">Save bulletin</button><p class="msg" id="bulletinMsg"></p>
+    </form>
+
+    <form class="card" id="churchForm">
+      <h2>2. Church information</h2>
+      <label>Church name<input name="churchName" value="Christ Church Anglican Communion"></label>
+      <label>Address<textarea name="address">Unical Hotel Road by Abeng Asang Street, Satellite Town, Akim Qua, Calabar.</textarea></label>
+      <label>Phone numbers<input name="phone" value="07065920955 · 08104205183"></label>
+      <label>Social handle<input name="social" value="@Christ Anglican Church Calabar"></label>
+      <button class="btn primary" type="submit">Save church information</button><p class="msg" id="churchMsg"></p>
+    </form>
+
+    <form class="card" id="serviceForm">
+      <h2>3. Sunday services</h2>
+      <label>First service<input name="first" value="6:30am"></label>
+      <label>Second service<input name="second" value="9:00am"></label>
+      <label>ACM<input name="acm" value="3:00pm"></label>
+      <label>EFAC<input name="efac" value="5:00pm"></label>
+      <button class="btn primary" type="submit">Save service times</button><p class="msg" id="serviceMsg"></p>
+    </form>
+
+    <form class="card" id="announcementForm">
+      <h2>4. Announcements</h2>
+      <p class="muted">Add, edit or remove notices without touching the website code.</p>
+      <textarea id="announcementsJson" rows="12">[["Welcome","We welcome all our members and visitors to church this morning in Jesus Name."],["AYF Rentals","Contact AYF for rental services for various occasions."],["Diocesan Investment Levy","Men – ₦2,000 · Women – ₦1,000 · Youths – ₦500 · Children – ₦100."]]</textarea>
+      <button class="btn primary" type="submit">Save announcements</button><p class="msg" id="announcementMsg"></p>
+    </form>
+
+    <form class="card wide" id="activityForm">
+      <h2>5. Weekly activities</h2>
+      <p class="muted">Use one activity per line in this format: Day | Activity | Time</p>
+      <textarea id="activitiesText" rows="20">Monday | Shower Of Change | 6am – 7am
+Monday | Women Prayer Meeting | 5pm – 6pm
+Monday | AYF Fellowship | 5pm – 7pm
+Tuesday | Calm the storm with Jesus | 12noon – 1pm
+Tuesday | Choir Practice | 5pm – 7pm
+Tuesday | Prayer Band | 5pm – 7pm
+Wednesday | Hour of Divine Encounter | 9am – 12noon
+Wednesday | Revival Service | 5pm – 7pm
+Wednesday | Praise Wednesday | Every last Wednesday
+Thursday | Band Rehearsal | 4pm – 5pm
+Thursday | Choir Rehearsal | 5pm – 6pm
+Thursday | CMF (Last Thursday) | 5pm – 6pm
+Friday | Bible Study (Treasure Search) | 5pm – 7pm
+Saturday | Go to them (Every 2nd Saturday) | 7am – 8am
+Saturday | Baptism (Every 3rd Saturday) | 9am
+Saturday | Guild of Stewards meeting | 10am
+Saturday | Praise Band Rehearsal | 1pm
+Saturday | Choir Rehearsal | 4pm
+Saturday | Boys and Girls Brigade | 4pm
+Sunday | 1st Service | 6:30am
+Sunday | 2nd Service | 9am
+Sunday | ACM | 3pm
+Sunday | EFAC | 5pm</textarea>
+      <button class="btn primary" type="submit">Save weekly activities</button><p class="msg" id="activityMsg"></p>
+    </form>
+
+    <section class="card wide">
+      <h2>6. Bulletin archive</h2>
+      <p class="muted">Past bulletins can be uploaded here with a date and label. They remain available to visitors from the archive page.</p>
+      <form id="archiveForm">
+        <div class="two"><label>Label<input name="label" placeholder="Sunday, 6 September 2026"></label><label>PDF<input name="pdf" type="file" accept="application/pdf"></label></div>
+        <button class="btn primary" type="submit">Add to archive</button><p class="msg" id="archiveMsg"></p>
+      </form>
+      <div id="archiveList" class="archive-list"></div>
+    </section>
+  </div>
+</section>
+</main>
+<script src="/admin.js"></script>
+</body>
+</html>

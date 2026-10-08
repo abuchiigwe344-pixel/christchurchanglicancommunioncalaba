@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Christ Church Anglican Communion | Calabar</title>
+  <meta name="description" content="Christ Church Anglican Communion, Calabar — weekly e-bulletin, services, announcements and church information.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img id="navLogo" src="/assets/church-logo.jpg" alt="Church logo">
+        <div><strong>Christ Church</strong><span>Anglican Communion · Calabar</span></div>
+      </a>
+      <button class="menu-btn" aria-label="Open menu">☰</button>
+      <nav>
+        <a href="#bulletin">E-Bulletin</a>
+        <a href="#services">Services</a>
+        <a href="#announcements">Announcements</a><a href="#church-arms">Arms</a><a href="#church-units">Units</a><a href="#clergy">Clergy</a>
+        <a href="#activities">Activities</a>
+        <a href="#contact">Contact</a>
+        <a class="admin-link" href="/admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">WELCOME TO CHRIST CHURCH</p>
+          <h1>Faith, worship, community and service.</h1>
+          <p class="hero-copy">A simple digital home for our church family — with the latest weekly bulletin, announcements, service information and activities.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#bulletin">Read this week's bulletin</a>
+            <a class="btn secondary" href="#services">View services</a>
+          </div>
+        </div>
+        <div class="hero-image-card">
+          <img src="/assets/church-building.jpg" alt="Christ Church Anglican Communion church building">
+        </div>
+      </div>
+    </section>
+
+    <section id="bulletin" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">WEEKLY E-BULLETIN</p><h2 id="bulletinTitle">This week's bulletin</h2></div>
+          <span class="pill" id="bulletinDate">30/08/2026</span>
+        </div>
+        <div class="bulletin-layout">
+          <div class="bulletin-info card">
+            <p class="muted">Current bulletin</p>
+            <h3 id="bulletinTopic">OTHER SIDE FORGOTTEN BREAD</h3>
+            <div class="details">
+              <div><span>Season</span><strong id="bulletinSeason">TRINITY XIII</strong></div>
+              <div><span>Office</span><strong id="bulletinOffice">MATTINS</strong></div>
+              <div><span>Colour</span><strong id="bulletinColour">GREEN</strong></div>
+              <div><span>Time</span><strong id="bulletinTime">7:30AM</strong></div>
+            </div>
+            <a id="openBulletin" class="btn primary full" href="/assets/current-bulletin.pdf" target="_blank">Open full PDF</a>
+            <a id="downloadBulletin" class="btn ghost full" href="/assets/current-bulletin.pdf" download>Download bulletin</a>
+          </div>
+          <div class="pdf-frame card">
+            <iframe id="pdfViewer" src="/assets/current-bulletin.pdf" title="Current weekly bulletin"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">WORSHIP</p><h2>Sunday services</h2></div></div>
+        <div class="service-grid">
+          <div class="service-card"><span>01</span><h3>First Service</h3><strong id="firstService">6:30am</strong><p>Join us for worship, prayer and the Word.</p></div>
+          <div class="service-card featured"><span>02</span><h3>Second Service</h3><strong id="secondService">9:00am</strong><p>A second opportunity to worship together as a church family.</p></div>
+          <div class="service-card"><span>03</span><h3>ACM</h3><strong id="acmService">3:00pm</strong><p>Church fellowship and ministry activity.</p></div>
+          <div class="service-card"><span>04</span><h3>EFAC</h3><strong id="efacService">5:00pm</strong><p>Faith, fellowship and Christian growth.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="announcements" class="section">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">STAY INFORMED</p><h2>Announcements</h2></div></div>
+        <div id="announcementList" class="announcement-list"></div>
+      </div>
+    </section>
+
+    <section id="activities" class="section alt">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">THIS WEEK</p><h2>Weekly activities</h2></div></div>
+        <div id="activityList" class="activity-table"></div>
+      </div>
+    </section>
+
+    <section id="church-arms" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">CHURCH ARMS</p><h2>Our Church Arms</h2></div></div><div id="churchArmGrid" class="people-grid"></div></div></section>
+    <section id="church-units" class="section alt"><div class="container"><div class="section-heading"><div><p class="eyebrow">CHURCH UNITS</p><h2>Our Church Units</h2></div></div><div id="churchUnitGrid" class="people-grid"></div></div></section>
+    <section id="clergy" class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">PASTORS & CLERGY</p><h2>Our Clergy</h2></div></div><div id="clergyGrid" class="clergy-grid"></div></div></section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">FIND US</p>
+          <h2>Christ Church Anglican Communion</h2>
+          <p>Unical Hotel Road by Abeng Asang Street, Satellite Town, Akim Qua, Calabar.</p>
+        </div>
+        <div class="contact-card">
+          <div><span>Phone</span><strong id="contactPhone">07065920955 · 08104205183</strong></div>
+          <div><span>Facebook</span><strong id="socialHandle">@Christ Anglican Church Calabar</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Christ Church Anglican Communion, Calabar.</span>
+      <span>Jesus is Lord.</span>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
